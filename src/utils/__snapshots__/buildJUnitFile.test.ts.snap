@@ -1,0 +1,249 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 1`] = `
+{
+  "testsuites": {
+    "$": {
+      "failures": 1,
+      "tests": 2,
+    },
+    "testsuite": [
+      {
+        "$": {
+          "classname": "classname",
+          "failures": 1,
+          "name": "name",
+          "tests": 2,
+        },
+        "testcases": [
+          {
+            "testcase": {
+              "$": {
+                "classname": "classname",
+                "file": "file",
+                "line": 0,
+                "name": "name",
+              },
+              "failure": {
+                "$": {
+                  "message": "error_message",
+                  "type": "error_type",
+                },
+                "_": "error_context",
+              },
+            },
+          },
+          {
+            "testcase": {
+              "$": {
+                "classname": "classname",
+                "file": "file",
+                "line": 0,
+                "name": "name",
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="2">
+  <testsuite name="name" classname="classname" tests="2" failures="1">
+    <testcases>
+      <testcase name="name" classname="classname" file="file" line="0">
+        <failure message="error_message" type="error_type">error_context</failure>
+      </testcase>
+    </testcases>
+    <testcases>
+      <testcase name="name" classname="classname" file="file" line="0"/>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`toXMLObj > JUnitObj{ testsuites: [] } minimal -> Obj 1`] = `
+{
+  "testsuites": {
+    "$": {
+      "failures": 0,
+      "tests": 0,
+    },
+    "testsuite": [],
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitObj{ testsuites: [] } minimal -> Obj 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="0" tests="0"/>"
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 1`] = `
+{
+  "testcase": {
+    "$": {
+      "classname": "classname",
+      "file": "file",
+      "line": 0,
+      "name": "name",
+    },
+    "failure": {
+      "$": {
+        "message": "error_message",
+        "type": "error_type",
+      },
+      "_": "error_context",
+    },
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testcase name="name" classname="classname" file="file" line="0">
+  <failure message="error_message" type="error_type">error_context</failure>
+</testcase>"
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 3`] = `
+{
+  "testcase": {
+    "$": {
+      "classname": "classname",
+      "file": "file",
+      "line": 0,
+      "name": "name",
+    },
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 4`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testcase name="name" classname="classname" file="file" line="0"/>"
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 1`] = `
+{
+  "testcase": {
+    "$": {
+      "classname": "classname",
+      "file": "file",
+      "line": 0,
+      "name": "name",
+    },
+    "failure": {
+      "$": {
+        "message": "error_message",
+        "type": "error_type",
+      },
+      "_": "error_context",
+    },
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testcase name="name" classname="classname" file="file" line="0">
+  <failure message="error_message" type="error_type">error_context</failure>
+</testcase>"
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 3`] = `
+{
+  "testcase": {
+    "$": {
+      "classname": "classname",
+      "file": "file",
+      "line": 0,
+      "name": "name",
+    },
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 4`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testcase name="name" classname="classname" file="file" line="0"/>"
+`;
+
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } inkremental -> Obj 1`] = `
+{
+  "testsuite": {
+    "$": {
+      "classname": "classname",
+      "failures": 1,
+      "name": "name",
+      "tests": 2,
+    },
+    "testcases": [
+      {
+        "testcase": {
+          "$": {
+            "classname": "classname",
+            "file": "file",
+            "line": 0,
+            "name": "name",
+          },
+          "failure": {
+            "$": {
+              "message": "error_message",
+              "type": "error_type",
+            },
+            "_": "error_context",
+          },
+        },
+      },
+      {
+        "testcase": {
+          "$": {
+            "classname": "classname",
+            "file": "file",
+            "line": 0,
+            "name": "name",
+          },
+        },
+      },
+    ],
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } inkremental -> Obj 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuite name="name" classname="classname" tests="2" failures="1">
+  <testcases>
+    <testcase name="name" classname="classname" file="file" line="0">
+      <failure message="error_message" type="error_type">error_context</failure>
+    </testcase>
+  </testcases>
+  <testcases>
+    <testcase name="name" classname="classname" file="file" line="0"/>
+  </testcases>
+</testsuite>"
+`;
+
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } minimal -> Obj 1`] = `
+{
+  "testsuite": {
+    "$": {
+      "classname": "classname",
+      "failures": 0,
+      "name": "name",
+      "tests": 0,
+    },
+    "testcases": [],
+  },
+}
+`;
+
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } minimal -> Obj 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuite name="name" classname="classname" tests="0" failures="0"/>"
+`;

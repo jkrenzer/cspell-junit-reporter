@@ -1,0 +1,89 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getReporter > saves additional data 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="1">
+  <testsuite name="CSpellChecks" classname="Spellchecks" tests="1" failures="1">
+    <testcases>
+      <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0">
+        <failure message="Spelling error detected" type="directive">fulll</failure>
+      </testcase>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`getReporter > saves xml to file 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="1">
+  <testsuite name="CSpellChecks" classname="Spellchecks" tests="1" failures="1">
+    <testcases>
+      <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0">
+        <failure message="Spelling error detected" type="directive">fulll</failure>
+      </testcase>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`getReporter > saves xml to stdout/stderr { outFile: 'stderr' } 1`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="1">
+  <testsuite name="CSpellChecks" classname="Spellchecks" tests="1" failures="1">
+    <testcases>
+      <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0">
+        <failure message="Spelling error detected" type="directive">fulll</failure>
+      </testcase>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`getReporter > saves xml to stdout/stderr { outFile: 'stderr' } 2`] = `""`;
+
+exports[`getReporter > saves xml to stdout/stderr { outFile: 'stdout' } 1`] = `""`;
+
+exports[`getReporter > saves xml to stdout/stderr { outFile: 'stdout' } 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="1">
+  <testsuite name="CSpellChecks" classname="Spellchecks" tests="1" failures="1">
+    <testcases>
+      <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0">
+        <failure message="Spelling error detected" type="directive">fulll</failure>
+      </testcase>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`getReporter > saves xml to stdout/stderr { outFile: undefined } 1`] = `""`;
+
+exports[`getReporter > saves xml to stdout/stderr { outFile: undefined } 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="1">
+  <testsuite name="CSpellChecks" classname="Spellchecks" tests="1" failures="1">
+    <testcases>
+      <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0">
+        <failure message="Spelling error detected" type="directive">fulll</failure>
+      </testcase>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`getReporter > saves xml to stdout/stderr undefined 1`] = `""`;
+
+exports[`getReporter > saves xml to stdout/stderr undefined 2`] = `
+"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites failures="1" tests="1">
+  <testsuite name="CSpellChecks" classname="Spellchecks" tests="1" failures="1">
+    <testcases>
+      <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0">
+        <failure message="Spelling error detected" type="directive">fulll</failure>
+      </testcase>
+    </testcases>
+  </testsuite>
+</testsuites>"
+`;
+
+exports[`getReporter > throws for invalid config 1`] = `[AssertionError: cspell-junit-reporter settings.outFile must be a string]`;
