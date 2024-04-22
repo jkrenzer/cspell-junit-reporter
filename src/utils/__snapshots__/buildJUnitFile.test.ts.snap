@@ -10,36 +10,42 @@ exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 1`] = 
     "testsuite": [
       {
         "$": {
+          "assertions": 2,
+          "errors": 0,
           "failures": 1,
+          "file": "./",
           "name": "name",
+          "skipped": 0,
           "tests": 2,
+          "time": 0,
+          "timestamp": "2024-04-22T17:33:42.238Z",
         },
-        "testcases": [
+        "testcase": [
           {
-            "testcase": {
+            "$": {
+              "assertions": 1,
+              "classname": "classname",
+              "file": "file",
+              "line": 0,
+              "name": "name",
+              "time": 0,
+            },
+            "failure": {
               "$": {
-                "classname": "classname",
-                "file": "file",
-                "line": 0,
-                "name": "name",
+                "message": "error_message",
+                "type": "error_type",
               },
-              "failure": {
-                "$": {
-                  "message": "error_message",
-                  "type": "error_type",
-                },
-                "_": "error_context",
-              },
+              "_": "error_context",
             },
           },
           {
-            "testcase": {
-              "$": {
-                "classname": "classname",
-                "file": "file",
-                "line": 0,
-                "name": "name",
-              },
+            "$": {
+              "assertions": 1,
+              "classname": "classname",
+              "file": "file",
+              "line": 0,
+              "name": "name",
+              "time": 0,
             },
           },
         ],
@@ -52,15 +58,11 @@ exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 1`] = 
 exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="2">
-  <testsuite name="name" tests="2" failures="1">
-    <testcases>
-      <testcase name="name" classname="classname" file="file" line="0">
-        <failure message="error_message" type="error_type">error_context</failure>
-      </testcase>
-    </testcases>
-    <testcases>
-      <testcase name="name" classname="classname" file="file" line="0"/>
-    </testcases>
+  <testsuite name="name" tests="2" failures="1" errors="0" skipped="0" assertions="2" time="0" file="./" timestamp="2024-04-22T17:33:42.239Z">
+    <testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0">
+      <failure message="error_message" type="error_type">error_context</failure>
+    </testcase>
+    <testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0"/>
   </testsuite>
 </testsuites>"
 `;
@@ -86,10 +88,12 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 1`]
 {
   "testcase": {
     "$": {
+      "assertions": 1,
       "classname": "classname",
       "file": "file",
       "line": 0,
       "name": "name",
+      "time": 0,
     },
     "failure": {
       "$": {
@@ -104,7 +108,7 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 1`]
 
 exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testcase name="name" classname="classname" file="file" line="0">
+<testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0">
   <failure message="error_message" type="error_type">error_context</failure>
 </testcase>"
 `;
@@ -113,10 +117,12 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 3`]
 {
   "testcase": {
     "$": {
+      "assertions": 1,
       "classname": "classname",
       "file": "file",
       "line": 0,
       "name": "name",
+      "time": 0,
     },
   },
 }
@@ -124,17 +130,19 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 3`]
 
 exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } inkremental -> Obj 4`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testcase name="name" classname="classname" file="file" line="0"/>"
+<testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0"/>"
 `;
 
 exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 1`] = `
 {
   "testcase": {
     "$": {
+      "assertions": 1,
       "classname": "classname",
       "file": "file",
       "line": 0,
       "name": "name",
+      "time": 0,
     },
     "failure": {
       "$": {
@@ -149,7 +157,7 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 1`] = `
 
 exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testcase name="name" classname="classname" file="file" line="0">
+<testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0">
   <failure message="error_message" type="error_type">error_context</failure>
 </testcase>"
 `;
@@ -158,10 +166,12 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 3`] = `
 {
   "testcase": {
     "$": {
+      "assertions": 1,
       "classname": "classname",
       "file": "file",
       "line": 0,
       "name": "name",
+      "time": 0,
     },
   },
 }
@@ -169,43 +179,49 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 3`] = `
 
 exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 4`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testcase name="name" classname="classname" file="file" line="0"/>"
+<testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0"/>"
 `;
 
 exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } inkremental -> Obj 1`] = `
 {
   "testsuite": {
     "$": {
+      "assertions": 2,
+      "errors": 0,
       "failures": 1,
+      "file": "./",
       "name": "name",
+      "skipped": 0,
       "tests": 2,
+      "time": 0,
+      "timestamp": "2024-04-22T17:33:42.240Z",
     },
-    "testcases": [
+    "testcase": [
       {
-        "testcase": {
+        "$": {
+          "assertions": 1,
+          "classname": "classname",
+          "file": "file",
+          "line": 0,
+          "name": "name",
+          "time": 0,
+        },
+        "failure": {
           "$": {
-            "classname": "classname",
-            "file": "file",
-            "line": 0,
-            "name": "name",
+            "message": "error_message",
+            "type": "error_type",
           },
-          "failure": {
-            "$": {
-              "message": "error_message",
-              "type": "error_type",
-            },
-            "_": "error_context",
-          },
+          "_": "error_context",
         },
       },
       {
-        "testcase": {
-          "$": {
-            "classname": "classname",
-            "file": "file",
-            "line": 0,
-            "name": "name",
-          },
+        "$": {
+          "assertions": 1,
+          "classname": "classname",
+          "file": "file",
+          "line": 0,
+          "name": "name",
+          "time": 0,
         },
       },
     ],
@@ -215,15 +231,11 @@ exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } inkremental -> Obj 1`
 
 exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } inkremental -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testsuite name="name" tests="2" failures="1">
-  <testcases>
-    <testcase name="name" classname="classname" file="file" line="0">
-      <failure message="error_message" type="error_type">error_context</failure>
-    </testcase>
-  </testcases>
-  <testcases>
-    <testcase name="name" classname="classname" file="file" line="0"/>
-  </testcases>
+<testsuite name="name" tests="2" failures="1" errors="0" skipped="0" assertions="2" time="0" file="./" timestamp="2024-04-22T17:33:42.242Z">
+  <testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0">
+    <failure message="error_message" type="error_type">error_context</failure>
+  </testcase>
+  <testcase name="name" classname="classname" file="file" line="0" assertions="1" time="0"/>
 </testsuite>"
 `;
 
@@ -231,16 +243,22 @@ exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } minimal -> Obj 1`] = 
 {
   "testsuite": {
     "$": {
+      "assertions": 0,
+      "errors": 0,
       "failures": 0,
+      "file": "./",
       "name": "name",
+      "skipped": 0,
       "tests": 0,
+      "time": 0,
+      "timestamp": "2024-04-22T17:33:42.233Z",
     },
-    "testcases": [],
+    "testcase": [],
   },
 }
 `;
 
 exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } minimal -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testsuite name="name" tests="0" failures="0"/>"
+<testsuite name="name" tests="0" failures="0" errors="0" skipped="0" assertions="0" time="0" file="./" timestamp="2024-04-22T17:33:42.235Z"/>"
 `;

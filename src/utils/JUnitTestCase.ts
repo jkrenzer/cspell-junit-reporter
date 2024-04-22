@@ -23,6 +23,8 @@ export class JUnitTestCase {
             classname: this.classname,
             file: this.file,
             line: this.line,
+            assertions: 1,
+            time: 0.0
         }
         if (this.error_type) {
             return {

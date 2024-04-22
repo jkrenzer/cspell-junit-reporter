@@ -19,17 +19,24 @@ export class JUnitTestSuite {
                     failures++;
                 else
                     successes++;
-                return testcase.toXMLObj();
+                return testcase.toXMLObj().testcase; // Cut the top key to merge in root's key
             });
+        let tests = failures + successes;
         return {
             testsuite: {
                 $: {
                     name: this.name,
-                    tests: failures + successes,
-                    failures: failures
+                    tests: tests,
+                    failures: failures,
+                    errors: 0,
+                    skipped: 0,
+                    assertions: tests,
+                    time: 0.0,
+                    file: "./",
+                    timestamp: (new Date()).toISOString()
 
                 },
-                testcases: testcases
+                testcase: testcases
 
             }
         };
