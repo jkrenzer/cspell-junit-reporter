@@ -2,13 +2,11 @@ import { JUnitTestCase } from "./JUnitTestCase.js";
 
 export class JUnitTestSuite {
     name: string;
-    classname: string;
     testcases: Array<JUnitTestCase>;
 
 
-    constructor(name: string, classname: string, testcases: Array<JUnitTestCase>) {
+    constructor(name: string, testcases: Array<JUnitTestCase>) {
         this.name = name;
-        this.classname = classname;
         this.testcases = testcases;
     }
 
@@ -27,7 +25,6 @@ export class JUnitTestSuite {
             testsuite: {
                 $: {
                     name: this.name,
-                    classname: this.classname,
                     tests: failures + successes,
                     failures: failures
 

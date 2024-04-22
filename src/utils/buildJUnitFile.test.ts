@@ -11,7 +11,7 @@ describe('toXMLObj', () => {
     let testcase2 = new JUnitTestCase('name', 'classname', 'file', 0);
     test.each([
         { Obj: new JUnitObj([]) },
-        { Obj: new JUnitTestSuite('name', 'classname', []) },
+        { Obj: new JUnitTestSuite('name', []) },
         { Obj: testcase1 },
         { Obj: testcase2 }
     ])('$Obj minimal -> Obj', ({ Obj }) => {
@@ -21,7 +21,7 @@ describe('toXMLObj', () => {
         let xmlObj = toXML(Obj);
         expect(xmlObj).toMatchSnapshot();
     });
-    let testsuite = new JUnitTestSuite('name', 'classname', [testcase1, testcase2]);
+    let testsuite = new JUnitTestSuite('name', [testcase1, testcase2]);
     let testobj = new JUnitObj([testsuite]);
     test.each([
         { Obj: testobj },

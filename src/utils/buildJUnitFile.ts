@@ -58,8 +58,7 @@ export function makeJUnitObj(issues: Array<Issue>) {
             )
         )
     }
-    let testsuit: JUnitTestSuite = new JUnitTestSuite("CSpellChecks",
-        "Spellchecks", testcases);
+    let testsuit: JUnitTestSuite = new JUnitTestSuite("CSpellChecks", testcases);
     return new JUnitObj([testsuit]);
 }
 

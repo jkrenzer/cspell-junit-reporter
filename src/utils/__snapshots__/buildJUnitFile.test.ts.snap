@@ -10,7 +10,6 @@ exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 1`] = 
     "testsuite": [
       {
         "$": {
-          "classname": "classname",
           "failures": 1,
           "name": "name",
           "tests": 2,
@@ -53,7 +52,7 @@ exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 1`] = 
 exports[`toXMLObj > JUnitObj{ testsuites: [ …(1) ] } inkremental -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="2">
-  <testsuite name="name" classname="classname" tests="2" failures="1">
+  <testsuite name="name" tests="2" failures="1">
     <testcases>
       <testcase name="name" classname="classname" file="file" line="0">
         <failure message="error_message" type="error_type">error_context</failure>
@@ -173,11 +172,10 @@ exports[`toXMLObj > JUnitTestCase{ name: 'name', …(6) } minimal -> Obj 4`] = `
 <testcase name="name" classname="classname" file="file" line="0"/>"
 `;
 
-exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } inkremental -> Obj 1`] = `
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } inkremental -> Obj 1`] = `
 {
   "testsuite": {
     "$": {
-      "classname": "classname",
       "failures": 1,
       "name": "name",
       "tests": 2,
@@ -215,9 +213,9 @@ exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } inkremental -> Obj 1`
 }
 `;
 
-exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } inkremental -> Obj 2`] = `
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } inkremental -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testsuite name="name" classname="classname" tests="2" failures="1">
+<testsuite name="name" tests="2" failures="1">
   <testcases>
     <testcase name="name" classname="classname" file="file" line="0">
       <failure message="error_message" type="error_type">error_context</failure>
@@ -229,11 +227,10 @@ exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } inkremental -> Obj 2`
 </testsuite>"
 `;
 
-exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } minimal -> Obj 1`] = `
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } minimal -> Obj 1`] = `
 {
   "testsuite": {
     "$": {
-      "classname": "classname",
       "failures": 0,
       "name": "name",
       "tests": 0,
@@ -243,7 +240,7 @@ exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } minimal -> Obj 1`] = 
 }
 `;
 
-exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(2) } minimal -> Obj 2`] = `
+exports[`toXMLObj > JUnitTestSuite{ name: 'name', …(1) } minimal -> Obj 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<testsuite name="name" classname="classname" tests="0" failures="0"/>"
+<testsuite name="name" tests="0" failures="0"/>"
 `;
