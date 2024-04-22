@@ -40,9 +40,9 @@ describe('toXMLObj', () => {
         { Obj: testobj, root: "testsuites" }
     ])('Failure count calculation', ({ Obj, root }) => {
         let obj = Obj.toXMLObj();
-        let attr: object = obj[root].$;
-        expect(attr.failures).toEqual(1);
-        expect(attr.tests).toEqual(2);
+        let attr = obj[root as keyof typeof obj]["$"];
+        expect(attr["failures"]).toEqual(1);
+        expect(attr["tests"]).toEqual(2);
     });
 
 });
