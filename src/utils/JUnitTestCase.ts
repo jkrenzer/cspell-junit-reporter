@@ -1,3 +1,14 @@
+import path from "path";
+import process from "process";
+
+function uriToPath(uri: string = "", relative: boolean = true): string {
+    let abs_path = uri.replace(/^file:\/\//, "");
+    if (relative)
+        return path.relative(process.cwd(), abs_path);
+    else
+        return path.normalize(abs_path);
+}
+
 export class JUnitTestCase {
     name: string;
     classname: string;
@@ -10,7 +21,7 @@ export class JUnitTestCase {
     constructor(name: string, classname: string, file: string, line: number, error_message: string = "", error_type: string = "", error_context: string = "") {
         this.name = name;
         this.classname = classname;
-        this.file = file;
+        this.file = uriToPath(file);
         this.line = line;
         this.error_message = error_message;
         this.error_type = error_type;
