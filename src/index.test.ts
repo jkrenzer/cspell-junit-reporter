@@ -14,6 +14,9 @@ import type { CSpellReporter } from '@cspell/cspell-types';
 import { MessageTypes } from '@cspell/cspell-types';
 
 import { getReporter } from './index.js';
+import { setTesting } from './test.js';
+
+setTesting();
 
 describe('getReporter', () => {
     let mockWriteFile = vi.spyOn(fs, 'writeFile');

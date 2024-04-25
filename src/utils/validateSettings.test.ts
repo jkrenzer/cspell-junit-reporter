@@ -1,6 +1,9 @@
 import { describe, expect, test } from 'vitest';
 
 import { validateSettings } from './validateSettings.js';
+import { setTesting } from '../test.js';
+
+setTesting();
 
 describe('validateSettings', () => {
     test.each`

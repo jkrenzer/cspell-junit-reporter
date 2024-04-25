@@ -5,6 +5,9 @@ import { JUnitTestSuite } from "./JUnitTestSuite.js";
 import { JUnitTestCase } from "./JUnitTestCase.js";
 
 import { toXML } from './buildJUnitFile.js';
+import { setTesting } from '../test.js';
+
+setTesting();
 
 describe('toXMLObj', () => {
     let testcase1 = new JUnitTestCase('name', 'classname', 'file', 0, 'error_message', 'error_type', 'error_context');
