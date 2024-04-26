@@ -3,8 +3,8 @@
 exports[`getReporter > saves additional data 1`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="1">
-  <testsuite name="CSpellChecks" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="0" file="./" timestamp="1970-01-01T00:00:00.000Z">
-    <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0" assertions="1" time="0">
+  <testsuite name="Spellcheck" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="349.058747" file="text.txt" timestamp="1970-01-01T00:00:00.000Z">
+    <testcase name="SpellingCheck0" classname="text.txt" file="text.txt" line="0" assertions="1" time="0">
       <failure message="Spelling error detected" type="directive">fulll</failure>
     </testcase>
   </testsuite>
@@ -14,8 +14,8 @@ exports[`getReporter > saves additional data 1`] = `
 exports[`getReporter > saves xml to file 1`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="1">
-  <testsuite name="CSpellChecks" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="0" file="./" timestamp="1970-01-01T00:00:00.000Z">
-    <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0" assertions="1" time="0">
+  <testsuite name="Spellcheck" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="349.058747" file="text.txt" timestamp="1970-01-01T00:00:00.000Z">
+    <testcase name="SpellingCheck0" classname="text.txt" file="text.txt" line="0" assertions="1" time="0">
       <failure message="Spelling error detected" type="directive">fulll</failure>
     </testcase>
   </testsuite>
@@ -25,8 +25,8 @@ exports[`getReporter > saves xml to file 1`] = `
 exports[`getReporter > saves xml to stdout/stderr { outFile: 'stderr' } 1`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="1">
-  <testsuite name="CSpellChecks" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="0" file="./" timestamp="1970-01-01T00:00:00.000Z">
-    <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0" assertions="1" time="0">
+  <testsuite name="Spellcheck" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="349.058747" file="text.txt" timestamp="1970-01-01T00:00:00.000Z">
+    <testcase name="SpellingCheck0" classname="text.txt" file="text.txt" line="0" assertions="1" time="0">
       <failure message="Spelling error detected" type="directive">fulll</failure>
     </testcase>
   </testsuite>
@@ -40,8 +40,8 @@ exports[`getReporter > saves xml to stdout/stderr { outFile: 'stdout' } 1`] = `"
 exports[`getReporter > saves xml to stdout/stderr { outFile: 'stdout' } 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="1">
-  <testsuite name="CSpellChecks" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="0" file="./" timestamp="1970-01-01T00:00:00.000Z">
-    <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0" assertions="1" time="0">
+  <testsuite name="Spellcheck" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="349.058747" file="text.txt" timestamp="1970-01-01T00:00:00.000Z">
+    <testcase name="SpellingCheck0" classname="text.txt" file="text.txt" line="0" assertions="1" time="0">
       <failure message="Spelling error detected" type="directive">fulll</failure>
     </testcase>
   </testsuite>
@@ -53,8 +53,8 @@ exports[`getReporter > saves xml to stdout/stderr { outFile: undefined } 1`] = `
 exports[`getReporter > saves xml to stdout/stderr { outFile: undefined } 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="1">
-  <testsuite name="CSpellChecks" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="0" file="./" timestamp="1970-01-01T00:00:00.000Z">
-    <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0" assertions="1" time="0">
+  <testsuite name="Spellcheck" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="349.058747" file="text.txt" timestamp="1970-01-01T00:00:00.000Z">
+    <testcase name="SpellingCheck0" classname="text.txt" file="text.txt" line="0" assertions="1" time="0">
       <failure message="Spelling error detected" type="directive">fulll</failure>
     </testcase>
   </testsuite>
@@ -66,8 +66,8 @@ exports[`getReporter > saves xml to stdout/stderr undefined 1`] = `""`;
 exports[`getReporter > saves xml to stdout/stderr undefined 2`] = `
 "<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <testsuites failures="1" tests="1">
-  <testsuite name="CSpellChecks" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="0" file="./" timestamp="1970-01-01T00:00:00.000Z">
-    <testcase name="SpellingError0" classname="Spellcheck" file="text.txt" line="0" assertions="1" time="0">
+  <testsuite name="Spellcheck" tests="1" failures="1" errors="0" skipped="0" assertions="1" time="349.058747" file="text.txt" timestamp="1970-01-01T00:00:00.000Z">
+    <testcase name="SpellingCheck0" classname="text.txt" file="text.txt" line="0" assertions="1" time="0">
       <failure message="Spelling error detected" type="directive">fulll</failure>
     </testcase>
   </testsuite>

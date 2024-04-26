@@ -47,18 +47,16 @@ export function getReporter(
         error: (message, error) => {
             reportData.error = push(reportData.error, { message, error });
         },
-        progress: useSettings.progress
-            ? (item) => {
-                reportData.progress = push(reportData.progress, item);
-            }
-            : noopReporter,
+        progress: (item) => {
+            reportData.progress = push(reportData.progress, item);
+        },
         result: async (result) => {
             const outFile = useSettings.outFile || STDOUT;
             const output = {
                 ...reportData,
                 result,
             };
-            const xmlData = makeJUnitXML(reportData.issues);
+            const xmlData = makeJUnitXML(reportData.issues, reportData.progress);
             if (outFile === STDOUT) {
                 console.log(xmlData);
                 return;

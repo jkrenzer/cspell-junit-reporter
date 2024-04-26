@@ -27,7 +27,7 @@ export type CSpellJUnitReporterOutput = {
     /**
      * CSpell file progress logs
      */
-    progress?: Array<ProgressItem | ProgressFileComplete>;
+    progress: Array<ProgressItem | ProgressFileComplete>;
     /**
      * Execution result
      */

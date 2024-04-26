@@ -1,7 +1,7 @@
 import path from "path";
 import process from "process";
 
-function uriToPath(uri: string = "", relative: boolean = true): string {
+export function uriToPath(uri: string = "", relative: boolean = true): string {
     let abs_path = uri.replace(/^file:\/\//, "");
     if (relative)
         return path.relative(process.cwd(), abs_path);
